@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoulSafe - Your Private Mood Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+   <div id="loginScreen">
+    <h1>SoulSafe 💖</h1>
+    <p id="loginText">set a password to protect your journal</p>
+<input type="password" id="passwordInput" placeholder="Enter password" required/>
+<button onclick="handlePassword()">continue</button>
+<p id="errorText" style="color:red;"></p>
+<button onclick="resetApp()" style="color:red;">Reset App</button>
+</div>
+<div id="mainApp" style="display:none;">
+<h1>SoulSafe💖</h1>
+    <form id="entryForm">
+      <input type="date" id="entryDate" required />
+      <select id="entryMood" required>
+        <option value="" disabled selected>Choose Mood</option>
+        <option value="😊">😊 Happy</option>
+        <option value="😐">😐 Neutral</option>
+        <option value="😢">😢 Sad</option>
+        <option value="😡">😡 Angry</option>
+        <option value="😴">😴 Tired</option>
+        <option value="😌">😌 Calm</option>
+      </select>
+      <textarea id="entryText" placeholder="Write your thoughts..." required></textarea>
+      <button type="submit">Save Entry</button>
+    </form>
+
+    <h2>🗂️ Your Entries</h2>
+    <div id="entriesList"></div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
